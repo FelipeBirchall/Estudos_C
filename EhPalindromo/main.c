@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-#define MAX 100
+
 
 bool EhPalindromo(char palavra[])
 {
@@ -21,7 +21,7 @@ bool EhPalindromo(char palavra[])
 
 int main()
 {
-    char palavra[MAX];
+    char palavra[1000];
     
     scanf("%[^\n]" , palavra);
 
