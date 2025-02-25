@@ -20,6 +20,18 @@ bool ehPalindromo(char palavra[], int i, bool palindromo) {
     return palindromo;
 }
 
+bool finalizar(char palavra[])
+    {
+       bool FIM = false;
+       int n = strlen(palavra);
+       if(palavra[0] == 'F' && palavra[1] == 'I' && palavra[2] == 'M' && n == 3)
+       {
+         FIM = true;
+       }
+       return FIM;
+    }
+
+
 
 int main() {
     char palavra[1000]; // Array para armazenar a palavra inserida pelo usuário
@@ -27,7 +39,7 @@ int main() {
     scanf("%[^\n]", palavra);
 
     // Loop que continua até o usuário digitar "FIM"
-    while (strcmp(palavra, "FIM") != 0) {
+    while (finalizar(palavra) == false) {
         // Verifica se a palavra é um palíndromo e exibe o resultado
         if (ehPalindromo(palavra, 0, true)) {
             printf("SIM\n"); 
